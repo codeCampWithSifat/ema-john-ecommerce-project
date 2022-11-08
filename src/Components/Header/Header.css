@@ -1,0 +1,36 @@
+.nav_menu {
+  width: 100%;
+  height: 80px;
+  background: #1c2b35;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 1rem; */
+}
+
+ul li {
+  margin-left: 2.5rem;
+}
+ul li a {
+  text-decoration: none;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin-right: 5rem;
+}
+.nav_menu img {
+  margin-left: 5rem;
+}
+
+ul li a:hover {
+  color: orange;
+  cursor: pointer;
+}
