@@ -3,8 +3,8 @@ import "./ReviewItem.css";
 import { RiDeleteBinFill } from 'react-icons/ri';
 
 
-const ReviewItem = ({product}) => {
-    console.log(product)
+const ReviewItem = ({product,handleRemovedProduct}) => {
+    // console.log(product)
     const {name, price, shipping, quantity, img} = product;
   return (
     <div className='single_reiview_container'>
@@ -19,7 +19,7 @@ const ReviewItem = ({product}) => {
             <p><small>Quantity : ${quantity}</small></p>
         </div>
         <div className="deleted_button">
-            <button><RiDeleteBinFill /></button>
+            <button onClick={() => handleRemovedProduct(product)}><RiDeleteBinFill /></button>
         </div>
       </div>
     </div>

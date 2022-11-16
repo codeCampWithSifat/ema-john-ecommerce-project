@@ -6,7 +6,9 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="nav_menu">
+        <Link to="/shop">
         <img src={logo} alt="" />
+        </Link>
         <nav>
         <ul>
             <li><Link to="/shop">Shop</Link></li>
