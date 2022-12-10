@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./SignUp.css";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebasel.init";
@@ -13,9 +13,12 @@ const SignUp = () => {
     useCreateUserWithEmailAndPassword(auth);
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
 
   if (user) {
-    navigate("/shop");
+    navigate(from, { replace: true });
   }
   if (loading) {
     return <p>Loading...</p>;
@@ -44,6 +47,7 @@ const SignUp = () => {
       return;
     }
     createUserWithEmailAndPassword(email, password);
+    
   };
 
   return (
